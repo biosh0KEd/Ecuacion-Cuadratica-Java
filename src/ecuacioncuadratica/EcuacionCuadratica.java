@@ -5,6 +5,7 @@
  */
 package ecuacioncuadratica;
 
+import java.util.Scanner;
 /**
  *
  * @author Efraín
@@ -16,6 +17,18 @@ public class EcuacionCuadratica {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner Entrada;
+        Entrada = new Scanner(System.in);
+        double x, y, z;
+        System.out.println("Resolucion de ecuaciones cuadraticas");
+        System.out.println("Introduce X:");
+        x = Entrada.nextDouble();
+        System.out.println("Introduce Y:");
+        y = Entrada.nextDouble();
+        System.out.println("Introduce Z:");
+        z = Entrada.nextDouble();    
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
     }
-    
 }
