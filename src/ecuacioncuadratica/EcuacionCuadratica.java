@@ -36,14 +36,8 @@ public class EcuacionCuadratica {
         double resultadoP = numeradorP / denominador;
         double resultadoN = numeradorN / denominador;
         if (determinante == 0){
-            if (resultadoP < 1){
-                System.out.println("El resultado es:");
-                System.out.println(resultadoN);
-            }
-            else {
-                System.out.println("El resultado es:");
-                System.out.println(resultadoP);
-            }
+            System.out.println("El resultado es:");
+            System.out.println(-y / denominador);
         }
         else if (determinante >= 1){
             System.out.println("Existen 2 resultados:");
