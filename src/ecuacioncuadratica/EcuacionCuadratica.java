@@ -27,8 +27,34 @@ public class EcuacionCuadratica {
         y = Entrada.nextDouble();
         System.out.println("Introduce Z:");
         z = Entrada.nextDouble();    
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(z);
-    }
+        double bCuadrada = y * y;
+        double ac4 = 4 * x * z;
+        double determinante = bCuadrada - ac4;
+        double numeradorP = -y + Math.sqrt(determinante);
+        double numeradorN = -y - Math.sqrt(determinante);
+        double denominador = 2 * x;
+        double resultadoP = numeradorP / denominador;
+        double resultadoN = numeradorN / denominador;
+        if (determinante == 0){
+            if (resultadoP < 1){
+                System.out.println("El resultado es:");
+                System.out.println(resultadoN);
+            }
+            else {
+                System.out.println("El resultado es:");
+                System.out.println(resultadoP);
+            }
+        }
+        else if (determinante >= 1){
+            System.out.println("Existen 2 resultados:");
+            System.out.println(resultadoP);
+            System.out.println(resultadoN);
+        }
+        else {
+            System.out.println("El resultado es");
+            double numReal = -y / denominador;
+            double numImaginario = Math.sqrt(-determinante) / denominador;
+            System.out.println(numReal + " +/- " + numImaginario + "i");
+        }
+    } 
 }
